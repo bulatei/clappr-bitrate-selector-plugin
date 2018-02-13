@@ -1,0 +1,1 @@
+# clappr-bitrate-selector-plugin
