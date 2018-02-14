@@ -13,16 +13,26 @@ Add both Clappr and the plugin scripts to your HTML:
 </head>
 ```
 
-Then just add `BitrateSelector` into the list of plugins of your player instance, and the options for the plugin go in the `bitrateSelector` property as shown below.
+Then just add `BitrateSelector` into the list of plugins of your player instance, and the options for the plugin go in the `bitrateSelectorConfig` property as shown below.
 
 ```javascript
 var player = new Clappr.Player({
-  source: "http://your.video/here.mp4",
-  autoPlay: false,
+  source: "http://your.video/240P.mp4",
   plugins: [
     BitrateSelector
   ],
-  bitrateSelector: {
+  bitrateSelectorConfig: {
+    bitrates: [{
+      src: 'http://your.video/720P.mp4',
+      label: '720'
+    }, {
+      src: 'http://your.video/480P.mp4',
+      label: '480'
+    },{
+      src: 'http://your.video/240P.mp4',
+      label: '240',
+      default: true
+    }]
   }
 });
 ```
@@ -35,7 +45,7 @@ Install dependencies:
   yarn install
 ```
 
-Start HTTP dev server `http://0.0.0.0:8080`:
+Start HTTP dev server `http://127.0.0.1:8080`:
 
 ```shell
   yarn run start

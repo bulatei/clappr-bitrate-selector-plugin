@@ -240,7 +240,7 @@ export default class BitrateSelector extends UICorePlugin {
     this.bitrateElement().removeClass('current')
     if (this.bitrates && this.currentBitrate !== undefined && this.bitrates[this.currentBitrate].label) {
       this.bitrateElement(this.currentBitrate).addClass('current')
-      this.buttonElement().text(this.bitrates[this.currentBitrate].label) 
+      this.buttonElement().text(this.bitrates[this.currentBitrate].label)
     }
   }
 }
