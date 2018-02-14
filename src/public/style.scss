@@ -1,0 +1,72 @@
+.bitrate_selector[data-bitrate-selector] {
+  float: right;
+  margin-top: 5px;
+  position: relative;
+
+  button {
+    background-color: transparent;
+    color: #fff;
+    font-family: Roboto,"Open Sans",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    border: none;
+    font-size: 10px;
+    outline: none;
+    opacity: 0.5;
+    transition: all 0.1s ease;
+
+    &:hover {
+      outline: none;
+      opacity: 0.75;
+      text-shadow: rgba(255,255,255,0.8) 0 0 5px;
+    }
+
+    &.changing {
+      animation: pulse 0.5s infinite alternate;
+    }
+  }
+
+  &> ul {
+    list-style-type: none;
+    position: absolute;
+    bottom: 25px;
+    border: 1px solid black;
+    display: none;
+    background-color: #e6e6e6;
+  }
+
+  li {
+    font-size: 10px;
+
+    &[data-title] {
+      background-color: #c3c2c2;
+      padding: 5px;
+    }
+
+    a {
+      color: #444;
+      padding: 2px 10px;
+      display: block;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #555;
+        color: white;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &.current a {
+      color: #f00;
+    }
+
+  }
+}
+
+@keyframes pulse {
+  0% {color: #fff;}
+  50% {color: #ff0101}
+  100% {color: #B80000;}
+}

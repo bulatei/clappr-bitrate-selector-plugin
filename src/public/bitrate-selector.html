@@ -1,0 +1,11 @@
+<button data-bitrate-selector-button>
+  Auto
+</button>
+<ul>
+  <% if (title) { %>
+  <li data-title><%= title %></li>
+  <% }; %>
+  <% for (var i = 0; i < bitrates.length; i++) { %>
+    <li><a href="#" data-bitrate-selector-select="<%= i %>"><%= bitrates[i].label %></a></li>
+  <% }; %>
+</ul>
