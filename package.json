@@ -1,6 +1,6 @@
 {
   "name": "clappr-bitrate-selector-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bitrate selector .m3u8 and .mp4",
   "main": "dist/bitrate-selector.min.js",
   "scripts": {
