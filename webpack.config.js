@@ -25,7 +25,8 @@ module.exports = {
     libraryTarget: 'umd'
   },
   externals: {
-    clappr: 'Clappr'
+    'Clappr': 'Clappr',
+    'clappr-zepto': 'clappr-zepto'
   },
   plugins: plugins,
   resolve: {
